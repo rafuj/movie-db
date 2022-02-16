@@ -25,7 +25,7 @@ const useFetch = (useParams) => {
 	};
 
 	useEffect(() => {
-		fetchMovies(`${API_ENDPOINT}&s=${useParams}`);
+		fetchMovies(`${API_ENDPOINT}${useParams}`);
 	}, [useParams]);
 
 	return { isLoading, data, error };
